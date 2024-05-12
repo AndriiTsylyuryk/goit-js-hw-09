@@ -30,9 +30,9 @@ function populateInfo() {
 function handleSubmit(event) {
   event.preventDefault();
   const { email, message } = form.elements;
-
   if (email.value === '' || message.value === '') {
     return alert('Please fill in all the fields!');
   }
+  localStorage.clear('feedback-form-state')
   form.reset();
 }
